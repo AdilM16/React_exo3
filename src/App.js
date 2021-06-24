@@ -1,25 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import { getAllByPlaceholderText } from "@testing-library/react";
+import React from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+let date = new Date();
+export default class App extends React.Component {
+  render() {
+    return (
+      <div className="App">
+        <h1>Bonjours à tous</h1>
+        <p>Date : {date.getDate()}/{date.getMonth()}/{date.getFullYear()} {date.getHours()}:{date.getMinutes()} </p>
+      </div>
+    );
+  }
 }
-
-export default App;
